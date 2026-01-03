@@ -8,12 +8,13 @@ import org.testng.annotations.Test;
 public class DriverManager {
 
      WebDriver driver;
-    public void startDriver(){
+    public WebDriver startDriver(){
 
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--Incognito");
-        driver = new ChromeDriver(options);
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--Incognito");
+        driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
         driver.manage().window().maximize();
+        return driver;
     }
 }
